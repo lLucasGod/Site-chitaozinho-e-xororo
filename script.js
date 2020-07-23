@@ -11,7 +11,7 @@ document.querySelector('#layout-sim').addEventListener('change', atualizarPreco)
 document.querySelector('#layout-nao').addEventListener('change', atualizarPreco)
 document.querySelector('#prazo').addEventListener('change', function () {
     const prazo = document.querySelector('#prazo').value
-    document.querySelector('label[for=prazo]').innerHTML = `Prazo: ${prazo} semanas`
+    document.querySelector('label[for=prazo]').innerHTML = `Prazo para show: ${prazo} mês`
 atualizarPreco()
 })
 
@@ -23,10 +23,10 @@ function atualizarPreco(){
     const incluiLayout = document.querySelector('#layout-sim').checked
     const prazo = document.querySelector('#prazo').value
 
-    let preco = qtde * 100;
-    if (temJS) preco *= 1.1
+    let preco = qtde * 500;
+    if (temJS) preco *= 1.10
     if (incluiLayout) preco += 500
-    let taxaUrgencia = 1 - prazo*0.1;
+    let taxaUrgencia = 20 - prazo*0.1;
     preco *= 1 + taxaUrgencia
 
     document.querySelector('#preco').innerHTML = `R$ ${preco.toFixed(2)}`
