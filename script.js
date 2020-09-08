@@ -31,3 +31,11 @@ function atualizarPreco(){
 
     document.querySelector('#preco').innerHTML = `R$ ${preco.toFixed(2)}`
 }
+
+
+
+changed = (event) => {
+    if (event.target.value !== "" && !event.target.classList.contains("notblank")) {
+      event.target.classList.toggle("notblank");
+    }
+  }

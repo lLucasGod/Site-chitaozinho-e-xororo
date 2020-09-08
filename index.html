@@ -9,10 +9,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portfólio</title>
+    <title>Chitãozinho e Xororó site</title>
 </head>
 
 <body>
+
+    <audio src="musicas/Evidências (Ao Vivo).mp3" autoplay loop>
+        Seu audio nao é suportado
+    </audio>
 
     <div class="container">
 
@@ -165,6 +169,7 @@
                         voluptate delectus qui, deserunt hic magni voluptatem voluptatum ab optio in dolores inventore
                         aliquam libero, est ducimus?</p>
                     <butoom>Saiba Mais</butoom>
+                    
                 </div>
 
                 </div>
@@ -193,15 +198,15 @@
             <h1>Contato</h1>
             <form>
                 <div class="input-group">
-                    <input type="text" class="field" id='nome'>
+                    <input type="text" class="field" id='nome' onchange="changed(event)">
                     <lable for="nome" class="field-lable">Nome</lable>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="field" id="email">
+                    <input type="text" class="field" id="email" onchange="changed(event)">
                     <lable for= "email" class="field-lable">E-mail</lable>
                 </div>
                 <div class="input-group">
-                    <textarea class="field"></textarea id="mensagem">
+                    <textarea class="field"></textarea id="mensagem" onchange="changed(event)">
                     <lable for="mensagem" class="field-lable">Mensagem</lable>
                 </div>
                 <button type="submit" class="btn-submit">Enviar</button>
